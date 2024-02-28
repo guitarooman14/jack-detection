@@ -1,10 +1,11 @@
 import { registerPlugin } from '@capacitor/core';
 
-import type { ExamplePlugin } from './definitions';
+import type { JackDetectionPlugin } from './definitions';
 
-const Example = registerPlugin<ExamplePlugin>('Example', {
-  web: () => import('./web').then(m => new m.ExampleWeb()),
-});
+// const JackDetection = registerPlugin<JackDetectionPlugin>('Jack', {
+//   web: () => import('./web').then(m => new m.JackStatusWeb()),
+// });
+const JackDetection = registerPlugin<JackDetectionPlugin>('Jack');
 
 export * from './definitions';
-export { Example };
+export { JackDetection };
