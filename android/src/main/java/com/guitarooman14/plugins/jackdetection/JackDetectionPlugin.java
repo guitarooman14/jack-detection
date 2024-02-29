@@ -6,7 +6,7 @@ import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
 import com.getcapacitor.annotation.CapacitorPlugin;
 
-@CapacitorPlugin(name = "JackDetectionPlugin")
+@CapacitorPlugin(name = "JackDetection")
 public class JackDetectionPlugin extends Plugin {
     public static final String JACK_CHANGE_EVENT = "jackStatusChange";
     private JackDetection implementation;
