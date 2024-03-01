@@ -16,7 +16,7 @@ public class JackDetection {
     private AudioManager audioManager;
     private BroadcastReceiver receiver;
     /**
-     * Create network monitoring object.
+     * Create jack detection monitoring object.
      *
      * @param context
      */
@@ -28,17 +28,6 @@ public class JackDetection {
                     public void onReceive(Context context, Intent intent) {
                         if (intent.getAction().equals(Intent.ACTION_HEADSET_PLUG)) {
                             statusChangeListener.onJackStatusChanged();
-//                            int state = intent.getIntExtra("state", -1);
-//                            switch (state) {
-//                                case 0:
-//                                    Log.d("JackDetection", "Headset unplugged");
-//                                    statusChangeListener.onJackStatusChanged(false);
-//                                    break;
-//                                case 1:
-//                                    Log.d("JackDetection", "Headset plugged");
-//                                    statusChangeListener.onJackStatusChanged(false);
-//                                    break;
-//                            }
                         }
                     }
                 };
@@ -47,7 +36,7 @@ public class JackDetection {
     /**
      * Get the current jack status.
      *
-     * @return NetworkInfo
+     * @return boolean
      */
     public boolean getJackStatus() {
         return audioManager.isWiredHeadsetOn();
@@ -92,7 +81,7 @@ public class JackDetection {
     }
 
     /**
-     * Interface for callbacks when network status changes.
+     * Interface for callbacks when jack status changes.
      */
     interface JackStatusChangeListener {
         void onJackStatusChanged();

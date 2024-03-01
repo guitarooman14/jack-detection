@@ -27,12 +27,12 @@ npx cap sync
 ### getStatus()
 
 ```typescript
-getStatus() => Promise<boolean>
+getStatus() => Promise<JackStatus>
 ```
 
 Query the current status of the jack.
 
-**Returns:** <code>Promise&lt;boolean&gt;</code>
+**Returns:** <code>Promise&lt;<a href="#jackstatus">JackStatus</a>&gt;</code>
 
 **Since:** 1.0.0
 
@@ -75,13 +75,6 @@ Remove all listeners for this plugin.
 ### Interfaces
 
 
-#### PluginListenerHandle
-
-| Prop         | Type                                      |
-| ------------ | ----------------------------------------- |
-| **`remove`** | <code>() =&gt; Promise&lt;void&gt;</code> |
-
-
 #### JackStatus
 
 Represents the state and type of the network connection.
@@ -89,6 +82,13 @@ Represents the state and type of the network connection.
 | Prop            | Type                 | Description                         | Since |
 | --------------- | -------------------- | ----------------------------------- | ----- |
 | **`connected`** | <code>boolean</code> | Whether the jack is plugged or not. | 1.0.0 |
+
+
+#### PluginListenerHandle
+
+| Prop         | Type                                      |
+| ------------ | ----------------------------------------- |
+| **`remove`** | <code>() =&gt; Promise&lt;void&gt;</code> |
 
 
 ### Type Aliases

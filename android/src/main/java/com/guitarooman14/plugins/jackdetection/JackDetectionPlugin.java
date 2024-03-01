@@ -26,7 +26,7 @@ public class JackDetectionPlugin extends Plugin {
     }
 
     /**
-     * Get current network status information.
+     * Get current jack status information.
      * @param call
      */
     @PluginMethod
@@ -55,7 +55,7 @@ public class JackDetectionPlugin extends Plugin {
     }
 
     /**
-     * Transform a NetworkInfo object into our JSObject for returning to client
+     * Map the jack status into our JSObject for returning to client
      * @param info
      * @return
      */

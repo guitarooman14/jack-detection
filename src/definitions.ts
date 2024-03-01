@@ -6,7 +6,7 @@ export interface JackDetectionPlugin {
    *
    * @since 1.0.0
    */
-  getStatus(): Promise<boolean>;
+  getStatus(): Promise<JackStatus>;
 
   /**
    * Listen for changes of the jack status.
@@ -27,7 +27,7 @@ export interface JackDetectionPlugin {
 }
 
 /**
- * Represents the state and type of the network connection.
+ * Represents the state and type of the jack connection.
  *
  * @since 1.0.0
  */
