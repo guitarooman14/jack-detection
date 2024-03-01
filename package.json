@@ -1,6 +1,6 @@
 {
   "name": "jack-detection",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "should detect when jack is plugged or unplugged",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
