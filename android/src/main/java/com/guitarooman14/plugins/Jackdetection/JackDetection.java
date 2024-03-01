@@ -1,4 +1,4 @@
-package com.guitarooman14.plugins.jackdetection;
+package com.guitarooman14.plugins.Jackdetection;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

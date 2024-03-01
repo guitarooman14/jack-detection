@@ -77,7 +77,7 @@ Remove all listeners for this plugin.
 
 #### JackStatus
 
-Represents the state and type of the network connection.
+Represents the state and type of the jack connection.
 
 | Prop            | Type                 | Description                         | Since |
 | --------------- | -------------------- | ----------------------------------- | ----- |

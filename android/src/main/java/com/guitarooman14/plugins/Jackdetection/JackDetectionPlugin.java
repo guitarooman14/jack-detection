@@ -1,4 +1,4 @@
-package com.guitarooman14.plugins.jackdetection;
+package com.guitarooman14.plugins.Jackdetection;
 
 import com.getcapacitor.JSObject;
 import com.getcapacitor.Plugin;
