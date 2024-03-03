@@ -1,4 +1,4 @@
-package com.guitarooman14.plugins.Jackdetection;
+package com.guitarooman14.plugins.JackDetection;
 
 import com.getcapacitor.JSObject;
 import com.getcapacitor.Plugin;
@@ -56,7 +56,7 @@ public class JackDetectionPlugin extends Plugin {
 
     /**
      * Map the jack status into our JSObject for returning to client
-     * @param info
+     * @param isJackConnected
      * @return
      */
     private JSObject getStatusJSObject(boolean isJackConnected) {

@@ -1,32 +1,30 @@
-import { WebPlugin } from '@capacitor/core';
+import { PluginListenerHandle, WebPlugin } from '@capacitor/core';
 
-import type { ExamplePlugin } from './definitions';
+import { JackDetectionPlugin, JackStatus, JackStatusChangeListener } from './definitions';
 
 export class JackStatusWeb extends WebPlugin implements JackDetectionPlugin {
-      constructor() {
-          super();
-      }
+  getStatus(): Promise<JackStatus> {
+    throw new Error('Method not implemented on web');
+  }
 
-      async getStatus(): Promise<boolean> {
+  /**
+   * Listen for changes of the jack status.
+   *
+   * @since 1.0.0
+   */
+  addListener(
+    eventName: 'jackStatusChange',
+    listenerFunc: JackStatusChangeListener,
+  ): Promise<PluginListenerHandle> & PluginListenerHandle {
+    return super.addListener(eventName, listenerFunc);
+  }
 
-      }
-
-    /**
-     * Listen for changes of the jack status.
-     *
-     * @since 1.0.0
-     */
-    async addListener(
-      eventName: 'jackStatusChange',
-      listenerFunc: JackStatusChangeListener,
-    ): Promise<PluginListenerHandle> & PluginListenerHandle {
-    }
-
-    /**
-     * Remove all listeners for this plugin.
-     *
-     * @since 1.0.0
-     */
-    async removeAllListeners(): Promise<void> {
-    }
+  /**
+   * Remove all listeners for this plugin.
+   *
+   * @since 1.0.0
+   */
+  async removeAllListeners(): Promise<void> {
+    return super.removeAllListeners();
+  }
 }
